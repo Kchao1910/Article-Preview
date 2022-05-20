@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-gray-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --gray-blue: hsl(212, 23%, 69%);
+  --light-gray-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body, main, article, .author-information {
+  display: flex;
+}
+
+main {
+  box-shadow: 0px 40px 40px 10px rgba(201, 213, 225, 0.65); 
+  max-width: 45.625rem;
+}
+
+article {
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+}
+
+h1, h2 {
+  color: var(--dark-gray-blue);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: .015625rem;
+  margin-bottom: .75rem;
+}
+
+p {
+  color: var(--desaturated-dark-blue);
+  font-weight: 500;
+}
+
+.copy, .name, .date {
+  font-size: .8125rem;
+  line-height: 1.25rem;
+  letter-spacing: .0075rem;
+}
+
+.copy {
+  margin-bottom: 1.25rem;
+}
+
+.publishing-information {
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+
+.article-image {
+  width: 17.8125rem;
+  height: 17.5rem;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 2.5rem;
+}
+
+.share-icon {
+  align-self: center;
+  width: 2rem;
+  height: 2rem;
+  z-index: 2;
+}
+
+.share-icon path, .share-icon:hover {
+  fill: var(--desaturated-dark-blue);
+}
+
+.share-icon, .share-icon:hover path {
+  fill: var(--light-gray-blue);
+}
+
+.social-media-icons {
+  position: absolute;
+  transform: translate(-9.375rem, -5rem);
+}
+
+.mobile-social-media-icons {
+  position: absolute;
+  transform: translate(-18.45rem, -.7rem);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media (min-width: 729px) {
+  .mobile-social-media-icons {
+    display: none;
+  }
+}
+
+@media (max-width: 728px) {
+  body {
+    width: 100vw;
+  }
+
+  main {
+    flex-direction: column;
+    width: 20.4375rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: .0125rem;
+  }
+
+  article {
+    padding: 2.25rem 2rem 1.25rem 2rem;
+  }
+
+  .copy {
+    margin-bottom: 2rem;
+  }
+
+  .article-image{
+    width: 20.4375rem;
+    height: 12.5rem;
+  }
+
+  .social-media-icons {
+    display: none;
+  }
+}
